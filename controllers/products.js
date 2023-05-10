@@ -25,7 +25,7 @@ let getProductById = async (req, res) => {
 
 let createProduct = async (req, res) => {
     try {
-        if (!req.body.name || req.body.name.length < 3) {
+        if (!req.body.name || req.body.name.length < 3 || !req.body.price || req.body.price < 0 || !req.body.company ||req.body.company.length < 3 || req.body.rating < 0 || req.body.rating > 5 || !req.body.rating || !req.body.featured) {
             return res.status(400).json({ success: false, msg: 'Product name must be at least 3 characters' })
         }
     } catch (error) {
