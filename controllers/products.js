@@ -3,18 +3,9 @@ const Product = require("../models/product");
 
 let getAllProducts = async (req, res) => {
     try {
-        let products = await Product.find({});
-        res.status(200).json({ success: true, products })
-    } catch (error) {
-        res.status(500).json({ success: false, msg: '[Error] :' + error.message })
-    }
-
-}
-let getAllProductsFeatured = async (req, res) => {
-    try {
-        let products = await Product.find({
-            featured: true
-        });
+        let products =  req.query.featured ? await Product.find({
+            featured: req.query.featured
+        }) :      await Product.find({});
         res.status(200).json({ success: true, products })
     } catch (error) {
         res.status(500).json({ success: false, msg: '[Error] :' + error.message })
@@ -74,5 +65,5 @@ let updateProductById = async (req, res) => {
 
 
 
-module.exports = { getAllProducts, getProductById , createProduct, deleteProductById, updateProductById, getAllProductsFeatured}
+module.exports = { getAllProducts, getProductById , createProduct, deleteProductById, updateProductById}
 
