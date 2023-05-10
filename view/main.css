@@ -1,0 +1,48 @@
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+.welcome-container {
+  text-align: center;
+  padding: 50px;
+  background-color: #fff;
+  border-radius: 10px;
+  width: fit-content;
+  margin : 0 auto ;
+  margin-top: 100px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 40px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.store-name {
+  font-weight: bold;
+  color: #ff4081;
+}
+
+.tagline {
+  font-size: 24px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background-color: #ff4081;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #e1006b;
+}
