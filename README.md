@@ -1,20 +1,18 @@
-# Task-Manager-NodeJs
+# Store-Project-NodeJs
 
-## A Task Manager App with Simple Ui and Crud Operations , Built Using Vanilla Js And NodeJs,Mongoose
+## A Store Project Api with very Simple Gui and Crud Operations ,  also you can filter Proudcts on your needs Built using  NodeJs,Mongoose
 
 ## ScreenShots
 
 ## Tech Used
 
-- Html
-- Css
-- JavaScript
-- axios
 - NodeJs
 - express
 - dotenv
 - Mongoose
 - Nodemon
+- Html
+- Css
 
 ## Features of Code
 
