@@ -1,6 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const {  connectDb } = require('./db/mongoDb');
+const productRouter = require('./routes/products');
 
 
 const app = express();
@@ -11,7 +12,9 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
 
-app.use("/api/v1/products",ProductRouter);
+app.use("/api/v1/products",productRouter);
+
+
 
 
 
