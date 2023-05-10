@@ -3,7 +3,18 @@ const Product = require("../models/product");
 
 let getAllProducts = async (req, res) => {
     try {
-        const products = await Product.find({});
+        let products = await Product.find({});
+        res.status(200).json({ success: true, products })
+    } catch (error) {
+        res.status(500).json({ success: false, msg: '[Error] :' + error.message })
+    }
+
+}
+let getAllProductsFeatured = async (req, res) => {
+    try {
+        let products = await Product.find({
+            featured: true
+        });
         res.status(200).json({ success: true, products })
     } catch (error) {
         res.status(500).json({ success: false, msg: '[Error] :' + error.message })
@@ -25,7 +36,7 @@ let getProductById = async (req, res) => {
 
 let createProduct = async (req, res) => {
     try {
-        if (!req.body.name || req.body.name.length < 3 || !req.body.price || req.body.price < 0 || !req.body.company ||req.body.company.length < 3 || req.body.rating < 0 || req.body.rating > 5 || !req.body.rating || !req.body.featured) {
+        if (!req.body.name || req.body.name.length < 3 || !req.body.price || req.body.price < 0 || !req.body.company ||req.body.company.length < 3 || req.body.rating < 0 || req.body.rating > 5 || !req.body.rating) {
             return res.status(400).json({ success: false, msg: 'Product name must be at least 3 characters' })
         }
         const product = await Product.create(req.body);
