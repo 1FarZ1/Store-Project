@@ -74,5 +74,5 @@ let updateProductById = async (req, res) => {
 
 
 
-module.exports = { getAllProducts, getProductById , createProduct, deleteProductById, updateProductById}
+module.exports = { getAllProducts, getProductById , createProduct, deleteProductById, updateProductById, getAllProductsFeatured}
 
