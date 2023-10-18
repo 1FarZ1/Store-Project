@@ -7,7 +7,7 @@ let getAllProducts = async (req, res) => {
             featured: req.query.featured
         }) :      await Product.find({});
         res.status(200).json({ success: true, products })
-    } catch (error) {
+    } catch (error)  {
         res.status(500).json({ success: false, msg: '[Error] :' + error.message })
     }
 
