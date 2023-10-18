@@ -1,6 +1,6 @@
 # Store-Project-NodeJs
 
-## A Store Project Api with very Simple Gui and Crud Operations ,  also you can filter Proudcts on your needs Built using  NodeJs,Mongoose
+## A Store Project Api with very Simple Gui and Crud Operations ,  also you can filter Products on your needs Built using  NodeJs,Mongoose
 
 ## ScreenShots
 
